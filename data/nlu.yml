@@ -1,0 +1,56 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - 你好
+    - 您好
+    - 早上好
+    - 晚上好
+    - 下午好
+
+- intent: introduction
+  examples: |
+    - 我叫[chloe](name)
+    - 我的名字是[Tom](name)
+
+- intent: goodbye
+  examples: |
+    - 再见
+    - 拜拜
+    - goodbye
+
+- intent: affirm
+  examples: |
+    - 是的
+    - 对
+    - 确实
+    - 你说的对
+
+- intent: deny
+  examples: |
+    - 不
+    - 我不这样认为
+    - 不对
+
+- intent: mood_great
+  examples: |
+    - 真棒
+    - 好的！
+
+- intent: mood_unhappy
+  examples: |
+    - 今天心情很差
+
+- intent: bot_challenge
+  examples: |
+    - 你是机器人吗?
+    - 你是人类吗?
+    - 我是在跟机器人对话吗?
+
+- intent: check_weather
+  examples: |
+    - 今天天气如何?
+    - 今天会下雨吗?
+    - 明天天气放晴吗?
+    - [广州](address)天气如何？

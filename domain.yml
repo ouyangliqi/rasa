@@ -1,0 +1,34 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- check_weather
+- introduction
+entities:
+- name
+- address
+responses:
+  utter_greet:
+  - text: 你好！
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: '希望这可以令你开心:'
+  utter_did_that_help:
+  - text: 对你有帮助吗？
+  utter_happy:
+  - text: 真棒！
+  utter_goodbye:
+  - text: 再见
+  utter_iamabot:
+  - text: 我是机器人
+  utter_checkweather:
+  - text: '{address}天气很好哦'
+  utter_introduction:
+  - text: 你好，{name}
