@@ -6,8 +6,6 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: check_weather
-  - action: utter_checkweather
   - intent: mood_great
   - action: utter_happy
 
@@ -16,7 +14,7 @@ stories:
   - intent: greet
   - action: utter_greet
   - intent: introduction
-  - action: utter_introduction
+  - action: action_say_hello
   - intent: mood_great
   - action: utter_happy
 
@@ -40,4 +38,19 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-
+- story: weather check
+  steps:
+    - intent: check_weather
+    - action: weather_form
+    - active_loop: weather_form
+    - slot_was_set:
+        - requested_slot: date_time
+    - slot_was_set:
+        - date_time: 今天
+    - slot_was_set:
+        - requested_slot: address
+    - slot_was_set:
+        - address: 广州
+    - active_loop: null
+    - intent: goodbye
+    - action: utter_goodbye

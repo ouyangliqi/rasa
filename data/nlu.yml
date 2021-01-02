@@ -50,7 +50,7 @@ nlu:
 
 - intent: check_weather
   examples: |
-    - 今天天气如何?
-    - 今天会下雨吗?
-    - 明天天气放晴吗?
-    - [广州](address)天气如何？
+    - [今天](date_time)天气如何?
+    - [今天](date_time)会下雨吗?
+    - [明天](date_time)天气放晴吗?
+    - [广州](address)[今天](date_time)天气如何？

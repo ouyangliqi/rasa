@@ -13,7 +13,24 @@ intents:
 - introduction
 entities:
 - name
+- date_time
 - address
+slots:
+  name:
+    type: any
+    auto_fill: false
+    influence_conversation: false
+  address:
+    type: any
+    auto_fill: false
+    influence_conversation: false
+  date_time:
+    type: any
+    auto_fill: false
+    influence_conversation: false
+  requested_slot:
+    type: any
+    influence_conversation: false
 responses:
   utter_greet:
   - text: 你好！
@@ -26,9 +43,23 @@ responses:
   - text: 真棒！
   utter_goodbye:
   - text: 再见
+  - text: 拜拜
   utter_iamabot:
   - text: 我是机器人
-  utter_checkweather:
-  - text: '{address}天气很好哦'
-  utter_introduction:
-  - text: 你好，{name}
+  utter_ask_address:
+  - text: 请问要查询哪里的天气？
+  utter_ask_date_time:
+  - text: 请问要查询什么时候的天气？
+actions:
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_goodbye
+  - utter_greet
+  - utter_happy
+  - utter_iamabot
+  - action_say_hello
+  - utter_ask_address
+  - utter_ask_date_time
+  - weather_form
+forms:
+  weather_form: {}
